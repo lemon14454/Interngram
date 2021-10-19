@@ -1,4 +1,5 @@
 const path = require("path");
+const Dotenv = require("dotenv-webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
@@ -51,5 +52,10 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "style.css",
     }),
+    new Dotenv(),
   ],
+  devServer: {
+    // react-router-dom won't work without this
+    historyApiFallback: true,
+  },
 };
