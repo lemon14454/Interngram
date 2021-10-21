@@ -31,16 +31,16 @@ const Login = () => {
   }, []);
 
   return (
-    <div className="container flex mx-auto max-w-screen-md items-center h-screen">
-      <div className="flex flex-col gap-2 w-3/5">
-        <h1 className="text-6xl font-semibold">Interngram</h1>
-        <p className="text-2xl">為初入網頁的你解答疑惑。</p>
+    <div className="container flex flex-col md:flex-row gap-[100px] mx-auto max-w-screen-md items-center justify-center h-screen">
+      <div className="flex flex-col gap-2">
+        <h1 className="text-3xl md:text-6xl font-semibold">Interngram</h1>
+        <p className="text-lg md:text-2xl">為初入職場的你解答疑惑。</p>
       </div>
-      <div className="flex flex-col w-2/5">
-        <h1 className="flex w-full mb-2 font-bold text-xl">會員登入</h1>
-        {error && <p className="mb-4 text-xs text-red-primary">{error}</p>}
-
+      <div className="flex flex-col items-center w-full">
         <form onSubmit={handleLogin} method="POST">
+          <h1 className="flex w-full mb-2 font-bold text-xl">會員登入</h1>
+          {error && <p className="mb-4 text-xs text-red-primary">{error}</p>}
+
           <input
             aria-label="Enter your email"
             type="text"
@@ -69,7 +69,7 @@ const Login = () => {
           </button>
           <p className="text-sm mt-2">
             還沒有帳號 ?{" "}
-            <Link to="/signup" className="text-green-400">
+            <Link to={ROUTES.SIGNUP} className="text-green-400">
               註冊
             </Link>
           </p>
