@@ -7,12 +7,15 @@ module.exports = {
       fontFamily: {
         inter: ["Inter", "Noto Sans TC", "sans-serif"],
       },
+      fill: (theme) => ({
+        red: theme("colors.red.primary"),
+      }),
       colors: {
         blue: {
           medium: "#005c98",
         },
         black: {
-          light: "#005c98",
+          light: "#262626",
           faded: "#000059",
         },
         gray: {

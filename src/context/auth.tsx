@@ -1,6 +1,5 @@
 import firebase from "firebase/app";
 import { createContext, FC, useContext, useEffect, useState } from "react";
-import FirebaseContext from "./firebase";
 
 type User = firebase.User | null;
 type ContextState = { user: User };

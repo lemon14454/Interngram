@@ -19,7 +19,7 @@ const Header = () => {
               <Link to={ROUTES.DASHBOARD}>Interngram</Link>
             </h1>
           </div>
-          <div className="text-gray-700 text-center flex gap-2 items-center align-items">
+          <div className="text-gray-700 text-center flex gap-4 items-center align-items">
             {user ? (
               <>
                 <Link to={ROUTES.DASHBOARD} aria-label="dashboard">

@@ -9,6 +9,7 @@ module.exports = {
     extensions: [".tsx", ".ts", ".js"],
     alias: {
       Avatar: path.resolve(__dirname, "src/images/avatars"),
+      Photos: path.resolve(__dirname, "src/images/users"),
     },
   },
   module: {
