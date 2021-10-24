@@ -1,5 +1,5 @@
 const Timeline = () => {
-  return <div>Timeline</div>;
+  return <div className="container col-span-2">timeline</div>;
 };
 
 export default Timeline;
