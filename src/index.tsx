@@ -3,10 +3,13 @@ import { App } from "./App";
 import "./style.css";
 import FirebaseContext from "./context/firebase";
 import { firebase, FieldValue } from "./lib/firebase";
+import { FirebaseAuthProvider } from "./context/auth";
 
 ReactDOM.render(
   <FirebaseContext.Provider value={{ firebase, FieldValue }}>
-    <App />
+    <FirebaseAuthProvider>
+      <App />
+    </FirebaseAuthProvider>
   </FirebaseContext.Provider>,
   document.getElementById("root")
 );
