@@ -2,7 +2,7 @@ const path = require("path");
 // const Dotenv = require("dotenv-webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const { webpack } = require("webpack");
+const webpack = require("webpack");
 
 module.exports = {
   entry: path.resolve(__dirname, "./src/index.tsx"),
