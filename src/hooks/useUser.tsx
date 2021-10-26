@@ -3,6 +3,7 @@ import { useFirebaseAuth } from "../context/auth";
 import { getUserByUserId } from "../services/firebase";
 
 export type UserType = {
+  imageUrl?: string;
   created?: string;
   email?: string;
   name?: string;

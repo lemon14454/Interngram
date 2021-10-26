@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { MAINUSER } from "../../constants/userConstant";
 
 interface HeaderProps {
   username: string;
@@ -10,7 +11,9 @@ const Header = ({ username }: HeaderProps) => {
       <div className="flex items-center">
         <Link to={`/p/${username}`} className="flex items-center">
           <img
-            src={require(`Avatar/${username}.jpg`)}
+            src={require(`Avatar/${
+              username === MAINUSER ? MAINUSER : "default"
+            }.jpg`)}
             className="rounded-full h-8 w-8 flex mr-3"
           />
           <p className="font-bold">{username}</p>

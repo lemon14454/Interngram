@@ -11,7 +11,7 @@ const Dashboard = () => {
   return (
     <div className="bg-gray-background">
       <Header />
-      <div className="grid grid-cols-3 gap-4 justify-between mx-auto max-w-screen-lg">
+      <div className="grid grid-cols-3 gap-8 justify-between mx-auto max-w-screen-lg px-4">
         <Timeline />
         <Sidebar />
       </div>

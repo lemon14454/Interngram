@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { MAINUSER } from "../../constants/userConstant";
 import {
   updateFollowedUserFollowers,
   updateLoggedInUserFollowing,
@@ -33,7 +34,9 @@ const SuggestedProfile = ({
     <div className="flex flex-row items-center align-items justify-between">
       <div className="flex items-center justify-between">
         <img
-          src={require(`Avatar/${username}.jpg`)}
+          src={require(`Avatar/${
+            username === MAINUSER ? MAINUSER : "default"
+          }.jpg`)}
           className="rounded-full w-8 flex mr-3"
         />
         <Link to={`/p/${username}`}>

@@ -1,6 +1,5 @@
 import ReactDOM from "react-dom";
 import { App } from "./App";
-import "./style.css";
 import FirebaseContext from "./context/firebase";
 import { firebase, FieldValue } from "./lib/firebase";
 import { FirebaseAuthProvider } from "./context/auth";

@@ -1,17 +1,17 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { useFirebaseAuth } from "../context/auth";
 import FirebaseContext from "../context/firebase";
 import * as ROUTES from "../constants/routes";
 import HomeIcon from "../icons/HomeIcon";
 import SignOutIcon from "../icons/SignOutIcon";
+import useUser from "../hooks/useUser";
 
 const Header = () => {
   const { firebase } = useContext(FirebaseContext)!;
-  const user = useFirebaseAuth();
+  const { user } = useUser();
 
   return (
-    <div className="h-16 bg-white border-b border-gray-primary mb-8">
+    <div className="h-16 bg-white border-b border-gray-primary mb-8 px-4">
       <div className="container mx-auto max-w-screen-lg h-full">
         <div className="flex justify-between h-full">
           <div className="text-gray-700 text-center flex items-center align-items cursor-pointer">
@@ -33,11 +33,11 @@ const Header = () => {
                   <SignOutIcon />
                 </button>
                 <div className="flex items-center curosr-pointer">
-                  <Link to={`/p/${user.displayName}`}>
+                  <Link to={`/p/${user.username}`}>
                     <img
                       className="rounded-full h-8 w-8 flex"
-                      src={require(`Avatar/${user.displayName}.jpg`)}
-                      alt={`${user.displayName} profile picture`}
+                      src={require(`Avatar/${user.imageUrl}.jpg`)}
+                      alt={`${user.imageUrl} profile picture`}
                     />
                   </Link>
                 </div>

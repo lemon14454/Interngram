@@ -6,7 +6,7 @@ const Sidebar = () => {
   const { user } = useUser();
 
   return (
-    <div>
+    <div className="hidden md:block">
       <User {...user!} />
       <Suggestions
         userId={user?.userId!}

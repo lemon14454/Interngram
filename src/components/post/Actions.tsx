@@ -48,7 +48,10 @@ const Actions = ({
               toggledLiked ? "fill-red text-red-primary" : "text-black-light"
             }`}
           />
-          <CommentIcon onClick={handleFocus} />
+          <CommentIcon
+            onClick={handleFocus}
+            className={"text-black-light select-none cursor-pointer"}
+          />
         </div>
       </div>
       <div className="p-4 py-0">

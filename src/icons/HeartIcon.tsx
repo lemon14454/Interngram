@@ -1,6 +1,6 @@
 interface HeartIconProps {
-  className: string;
-  onClick: React.MouseEventHandler<SVGSVGElement>;
+  className?: string;
+  onClick?: React.MouseEventHandler<SVGSVGElement>;
 }
 
 const HeartIcon = ({ className, onClick }: HeartIconProps) => {

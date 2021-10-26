@@ -39,12 +39,14 @@ const Signup = () => {
           username: username.toLowerCase(),
           name,
           email,
+          imageUrl: "default",
+          followers: [],
           following: [],
           created: Date.now(),
         });
         setLoading(false);
 
-        history.push(ROUTES.DASHBOARD);
+        history.push(ROUTES.LOGIN);
       } catch (error: any) {
         setLoading(false);
         setName("");
@@ -63,10 +65,14 @@ const Signup = () => {
   }, []);
 
   return (
-    <div className="container flex flex-col md:flex-row gap-[100px] mx-auto max-w-screen-md items-center justify-center h-screen px-6 md:px-0">
+    <div className="container flex flex-col md:flex-row mx-auto max-w-screen-lg items-center justify-center gap-8 md:justify-between h-screen px-4">
       <div className="flex flex-col gap-2">
-        <h1 className="text-3xl md:text-6xl font-semibold">Interngram</h1>
-        <p className="text-lg md:text-2xl">為初入職場的你解答疑惑。</p>
+        <h1 className="text-4xl md:text-6xl font-semibold">Interngram</h1>
+        <p className="text-lg md:text-2xl text-green-400">紀錄你生活的點滴。</p>
+        <p className="text-md max-w-md md:max-w-2xl">
+          此網站為參考 Instagram 模板做切版及 React 練習使用，網站雖然串接
+          Firebase，但目前只提供會員功能以及查看貼文，追蹤其他使用者等功能，更換大頭貼及發佈貼文不在功能內。
+        </p>
       </div>
       <div className="flex flex-col items-center w-full">
         <form onSubmit={handleSignup} method="POST">

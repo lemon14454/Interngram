@@ -3,7 +3,8 @@ import { Suspense, lazy } from "react";
 import { useFirebaseAuth } from "./context/auth";
 import ProtectedRoute from "./helpers/ProtectedRoute";
 import * as ROUTES from "./constants/routes";
-import IsUserLoggedIn from "./helpers/isUserLoggedIn";
+import IsUserLoggedIn from "./helpers/IsUserLoggedIn";
+import "./style.css";
 
 const Login = lazy(() => import("./pages/Login"));
 const SignUp = lazy(() => import("./pages/Signup"));

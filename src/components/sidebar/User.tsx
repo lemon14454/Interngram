@@ -1,6 +1,7 @@
 import { memo } from "react";
 import Skeleton from "react-loading-skeleton";
 import { Link } from "react-router-dom";
+import { MAINUSER } from "../../constants/userConstant";
 import { UserType } from "../../hooks/useUser";
 
 const User = (user: UserType) => {
@@ -16,7 +17,9 @@ const User = (user: UserType) => {
       <div className="flex items-center justify-between col-span-1">
         <img
           className="rounded-full w-16 flex mr-3"
-          src={require(`Avatar/${username}.jpg`)}
+          src={require(`Avatar/${
+            username === MAINUSER ? MAINUSER : "default"
+          }.jpg`)}
         />
       </div>
       <div className="col-span-3">

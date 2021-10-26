@@ -1,12 +1,13 @@
 interface CommentIconProps {
-  onClick: () => void;
+  onClick?: () => void;
+  className?: string;
 }
 
-const CommentIcon = ({ onClick }: CommentIconProps) => {
+const CommentIcon = ({ onClick, className }: CommentIconProps) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="w-6 h-6 text-black-light select-none cursor-pointer"
+      className={`w-6 h-6 ${className}`}
       onClick={onClick}
       fill="none"
       viewBox="0 0 24 24"
