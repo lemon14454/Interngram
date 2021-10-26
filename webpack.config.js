@@ -1,7 +1,8 @@
 const path = require("path");
-const Dotenv = require("dotenv-webpack");
+// const Dotenv = require("dotenv-webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { webpack } = require("webpack");
 
 module.exports = {
   entry: path.resolve(__dirname, "./src/index.tsx"),
@@ -57,7 +58,15 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "style.css",
     }),
-    new Dotenv(),
+    // new Dotenv(),
+    new webpack.EnvironmentPlugin([
+      "APIKEY",
+      "APPID",
+      "AUTHDOMAIN",
+      "MESSAGINGSENDERID",
+      "PROJECTID",
+      "STORAGEBUCKET",
+    ]),
   ],
   devServer: {
     // react-router-dom won't work without this
